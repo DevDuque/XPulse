@@ -58,6 +58,6 @@
         android:fontFamily="@font/rajdhani_bold"
         android:textColor="@color/background_color"
 
-        android:layout_margin="48dp" />
+        android:layout_margin="40dp" />
 
 </LinearLayout>
