@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Splash Screen -->
+    <string name="str_splash"> Carregando novas aventuras e dimensões…\nPrepare-se para se conectar. </string>
+
+    <!-- Login Screen -->
+    <string name="str_title"> Transforme a batalha em um espetáculo </string>
+    <string name="str_subtitle"> Como Jhin, coordene com seus aliados,\ncrie uma sinfonia de habilidades e conquistas.</string>
+    <string name="str_loginDisc"> Entrar com Discord </string>
+    <string name="str_loginGoog"> Entrar com Google </string>
+
+    <!-- Home Screen -->
+    <string name="str_img_title"> Hora de explorar novas dimensões </string>
+    <string name="str_img_subtitle"> Hora de se unir no portal místico e desbravar o desconhecido. </string>
+
+    <string name="str_clearFilter"> Limpar filtros </string>
+
+        <!-- Category Carrousel -->
+        <string name="str_ranked_btn"> Ranqueada </string>
+        <string name="str_casual_btn"> Casual </string>
+        <string name="str_watch_btn"> Watch-Party </string>
+        <string name="str_duel_btn"> Duelo 1v1 </string>
+        <string name="str_talk"> Conversa </string>
+
+        <!-- Games Div -->
+        <string name="str_games_div"> Partidas Agendadas: </string>
+        <string name="str_games_empty">Nenhum jogo registrado ainda, comece agora!</string>
+
+    <!-- Activity Screen -->
+    <string name="str_activity_players"> Jogadores </string>
+    <string name="str_enter_server"> Entrar no Servidor </string>
+
+    <!-- Players Status-->
+    <string name="str_available"> Disponível </string>
+    <string name="str_busy"> Ocupado </string>
+    <string name="str_unavailable"> Indisponível </string>
+
+        <!-- Players Bagde -->
+        <string name="str_user_vip"> Premium </string>
+        <string name="str_user_guest"> Convidado </string>
+
+    <!-- AddMatch Screen -->
+    <string name="str_add_match"> Schedule Match </string>
+
+    <!-- Inputs -->
+    <string name="str_category_input"> Category </string>
+    <!-- Category Carrousel -->
+
+    <string name="str_activity_input"> Activity </string>
+    <string name="str_activity_placeholder"> Select an activity </string>
+
+    <!-- Activity Drawer -->
+    <string name="str_league_type"> MOBA </string>
+    <string name="str_valorant_type"> FPS </string>
+    <string name="str_warzone_type"> BattleRoyale </string>
+    <string name="str_minecraft_type"> Sobrevivência </string>
+    <string name="str_talk_type"> Conversa </string>
+
+    <string name="str_server_input"> Servidor </string>
+    <string name="str_server_placeholder"> Link do Servidor </string>
+
+    <string name="str_time_input"> Data e Hora </string>
+    <string name="str_date_input"> Dia / Mês </string>
+    <string name="str_hour_input"> Hora / Min </string>
+
+    <string name="str_description_input"> Descrição </string>
+    <string name="str_description_max"> Max 100 caracteres </string>
+</resources>
