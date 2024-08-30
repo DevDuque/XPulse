@@ -17,64 +17,63 @@
 
     <string name="str_clearFilter"> Clean filters </string>
 
-        <!-- Category Carrousel -->
-        <string name="str_ranked_btn"> Ranked </string>
-        <string name="str_casual_btn"> Casual </string>
-        <string name="str_watch_btn"> Watch-Party </string>
-        <string name="str_duel_btn"> Duel 1v1 </string>
-        <string name="str_talk"> Just Chatting </string>
+    <!-- Category Carrousel -->
+    <string name="str_ranked_btn"> Ranked </string>
+    <string name="str_casual_btn"> Casual </string>
+    <string name="str_watch_btn"> Watch-Party </string>
+    <string name="str_duel_btn"> Duel 1v1 </string>
+    <string name="str_talk"> Just Chatting </string>
 
-        <!-- Games Div -->
-        <string name="str_games_div">Scheduled Matches</string>
-        <string name="str_games_empty">No games registered yet, start now!</string>
+    <!-- Games Div -->
+    <string name="str_games_div">Scheduled Matches</string>
+    <string name="str_games_empty">No games registered yet, start now!</string>
 
-        <!-- Games -->
-        <string name="str_league" translatable="false"> League of Legends </string>
-        <string name="str_valorant" translatable="false"> Valorant </string>
-        <string name="str_warzone" translatable="false"> COD: Warzone </string>
-        <string name="str_apex" translatable="false"> Apex Legends </string>
-        <string name="str_minecraft" translatable="false"> Minecraft </string>
+    <!-- Games -->
+    <string name="str_league" translatable="false"> League of Legends </string>
+    <string name="str_valorant" translatable="false"> Valorant </string>
+    <string name="str_warzone" translatable="false"> COD: Warzone </string>
+    <string name="str_apex" translatable="false"> Apex Legends </string>
+    <string name="str_minecraft" translatable="false"> Minecraft </string>
 
     <!-- Activity Screen -->
     <string name="str_activity_players"> Players </string>
     <string name="str_enter_server"> Join the Server </string>
 
-        <!-- Players Status-->
-        <string name="str_available"> Available </string>
-        <string name="str_busy"> Busy </string>
-        <string name="str_unavailable"> Unavailable </string>
+    <!-- Players Status-->
+    <string name="str_available"> Available </string>
+    <string name="str_busy"> Busy </string>
+    <string name="str_unavailable"> Unavailable </string>
 
-            <!-- Players Bagde -->
-            <string name="str_user_vip"> Premium </string>
-            <string name="str_user_guest"> Guest </string>
+    <!-- Players Bagde -->
+    <string name="str_user_vip"> Premium </string>
+    <string name="str_user_guest"> Guest </string>
 
     <!-- AddMatch Screen -->
     <string name="str_add_match"> Schedule Match </string>
 
-        <!-- Inputs -->
-        <string name="str_category_input"> Category </string>
-        <!-- Category Carrousel -->
+    <!-- Inputs -->
+    <string name="str_category_input"> Category </string>
+    <!-- Category Carrousel -->
 
-        <string name="str_activity_input"> Activity </string>
-        <string name="str_activity_placeholder"> Select an activity </string>
+    <string name="str_activity_input"> Activity </string>
+    <string name="str_activity_placeholder"> Select an activity </string>
 
-        <!-- Activity Drawer -->
-        <string name="str_league_type"> MOBA </string>
-        <string name="str_valorant_type"> FPS </string>
-        <string name="str_warzone_type"> BattleRoyale </string>
-        <string name="str_minecraft_type"> Survival </string>
-        <string name="str_talk_type"> Talks </string>
+    <!-- Activity Drawer -->
+    <string name="str_league_type"> MOBA </string>
+    <string name="str_valorant_type"> FPS </string>
+    <string name="str_warzone_type"> BattleRoyale </string>
+    <string name="str_minecraft_type"> Survival </string>
+    <string name="str_talk_type"> Talks </string>
 
-        <string name="str_server_input"> Server </string>
-        <string name="str_server_placeholder"> Server`s link </string>
+    <string name="str_server_input"> Server </string>
+    <string name="str_server_placeholder"> Server`s link </string>
 
-        <string name="str_time_input"> Date and Hour </string>
-        <string name="str_date_input"> Day / Month </string>
-        <string name="str_hour_input"> Hour / Min </string>
+    <string name="str_time_input"> Date and Hour </string>
+    <string name="str_date_input"> Day / Month </string>
+    <string name="str_hour_input"> Hour / Min </string>
 
-        <string name="str_description_input"> Description </string>
-        <string name="str_description_max"> Max: 100 characters </string>
-
+    <string name="str_description_input"> Description </string>
+    <string name="str_description_max"> Max: 100 characters </string>
 
 
 </resources>

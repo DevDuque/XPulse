@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="primary_color"> #DB162F </color>
+    <color name="secondary_color"> #0FA3B1 </color>
+    <color name="background_color"> #272727 </color>
+
+    <color name="text_color"> #DBDBDB </color>
+
+    <color name="stroke_color"> #0B727C </color>
+    <color name="btn_end_color"> #FF0F1923 </color>
+    <color name="btn_start_color"> #000F1923 </color>
+
+    <color name="tab_color"> #0F1923</color>
 </resources>
