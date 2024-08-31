@@ -1,15 +1,187 @@
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/home_screen"
 
-<FrameLayout android:id="@+id/home_screen"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeScreen">
 
-    <fragment
-        android:id="@+id/category_fragment"
-        android:name="br.team.xpulse.CategorySection.CategoryFragment"
+    android:fitsSystemWindows="true"
+    android:background="@color/background_color"
+    tools:context=".HomeScreen" >
+
+    <!-- Header -->
+    <LinearLayout android:id="@+id/header_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</FrameLayout>
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_margin="16dp"
+
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_user"
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+
+                android:textSize="20sp"
+                android:text="@string/app_name"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/rajdhani_semibold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+
+                android:textSize="20sp"
+                android:text="@string/str_casual_btn"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/rajdhani_semibold"
+                />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_add"
+            android:background="@android:color/transparent"
+
+            />
+
+
+    </LinearLayout>
+
+    <!-- ImageSection-->
+    <LinearLayout android:id="@+id/image_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
+
+        android:layout_marginVertical="24dp"
+
+        android:background="@color/text_color"
+
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="16dp"
+
+                android:textSize="24sp"
+                android:text="@string/str_img_title"
+                android:textColor="@color/secondary_color"
+                android:fontFamily="@font/rajdhani_semibold"
+                />
+
+            <TextView
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+
+                android:textSize="12sp"
+                android:text="@string/str_img_subtitle"
+                android:textColor="@color/stroke_color"
+                android:fontFamily="@font/rajdhani_semibold"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/img_section"
+            />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/filter_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="end"
+
+        app:layout_constraintTop_toBottomOf="@id/image_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:src="@drawable/ic_filter"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/str_clearFilter"
+            android:textSize="12sp"
+            android:textColor="@color/text_color"
+            android:fontFamily="@font/rajdhani_bold"
+
+            android:layout_marginStart="12dp"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/filter_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <fragment
+            android:id="@+id/category_fragment"
+            android:name="br.team.xpulse.CategorySection.CategoryFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

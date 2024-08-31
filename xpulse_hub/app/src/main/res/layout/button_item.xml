@@ -5,7 +5,6 @@
     android:layout_width="80dp"
 
     android:background="@drawable/btn_gradient"
-    android:backgroundTint="@null"
 
     android:padding="8dp"
 
