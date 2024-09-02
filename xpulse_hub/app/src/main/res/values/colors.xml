@@ -5,6 +5,8 @@
     <color name="background_color"> #272727 </color>
 
     <color name="text_color"> #DBDBDB </color>
+    <color name="placeholder_color"> #999999 </color>
+
 
     <color name="stroke_color"> #0B727C </color>
     <color name="btn_end_color"> #FF0F1923 </color>
@@ -12,4 +14,5 @@
 
 
     <color name="tab_color"> #0F1923</color>
+    <color name="tab_half_color"> #384048 </color>
 </resources>

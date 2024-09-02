@@ -1,12 +1,15 @@
-    <!-- res/drawable/btn_gradient.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-<item>
-    <shape>
-        <gradient
-            android:startColor="#000F1923"
-            android:endColor="#FF0F1923"
-            android:angle="270" />
-        <corners android:radius="16dp" />
-    </shape>
-</item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#000F1923"
+                android:endColor="#FF0F1923"
+                android:angle="270" />
+            <corners android:radius="16dp" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/secondary_color" />
+        </shape>
+    </item>
 </selector>

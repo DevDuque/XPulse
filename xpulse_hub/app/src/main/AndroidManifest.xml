@@ -13,10 +13,13 @@
         android:theme="@style/Theme.Xpulsehub"
         tools:targetApi="31">
         <activity
-            android:name=".HomeScreen"
+            android:name=".Screens.AddScreen"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".Screens.HomeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.Xpulsehub">
             <intent-filter>
@@ -26,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Screens.MainActivity"
             android:theme="@style/Theme.Xpulsehub" />
     </application>
 

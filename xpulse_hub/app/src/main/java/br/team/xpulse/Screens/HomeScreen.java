@@ -1,6 +1,8 @@
-package br.team.xpulse;
+package br.team.xpulse.Screens;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +10,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import br.team.xpulse.R;
+
 public class HomeScreen extends AppCompatActivity {
+
+    ImageButton btnAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +30,13 @@ public class HomeScreen extends AppCompatActivity {
             return insets;
         });
 
+        btnAdd = findViewById(R.id.btn_add);
+
+        btnAdd.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeScreen.this, AddScreen.class);
+
+            startActivity(intent);
+        });
 
     }
 }

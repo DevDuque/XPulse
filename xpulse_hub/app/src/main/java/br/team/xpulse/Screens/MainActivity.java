@@ -1,4 +1,4 @@
-package br.team.xpulse;
+package br.team.xpulse.Screens;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +10,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.appcompat.app.AppCompatActivity;
 
+import br.team.xpulse.R;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button logDisc;
+    private Button btnloginDisc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +30,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        logDisc = findViewById(R.id.login_disc);
-        logDisc.setOnClickListener(v -> {
+        btnloginDisc = findViewById(R.id.login_disc);
+        btnloginDisc.setOnClickListener(v -> {
            Intent intent = new Intent(MainActivity.this, HomeScreen.class);
 
            startActivity(intent);
         });
+
+
     }
 }

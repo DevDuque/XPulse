@@ -18,15 +18,24 @@
     <string name="str_clearFilter"> Clean filters </string>
 
     <!-- Category Carrousel -->
+    <string-array name="button_texts">
+        <item>@string/str_ranked_btn</item>
+        <item>@string/str_casual_btn</item>
+        <item>@string/str_watch_btn</item>
+        <item>@string/str_duel_btn</item>
+        <item>@string/str_talk</item>
+    </string-array>
+
     <string name="str_ranked_btn"> Ranked </string>
     <string name="str_casual_btn"> Casual </string>
     <string name="str_watch_btn"> Watch-Party </string>
     <string name="str_duel_btn"> Duel 1v1 </string>
-    <string name="str_talk"> Just Chatting </string>
+    <string name="str_talk"> Chat </string>
 
     <!-- Games Div -->
     <string name="str_games_div">Scheduled Matches</string>
     <string name="str_games_empty">No games registered yet, start now!</string>
+
 
     <!-- Games -->
     <string name="str_league" translatable="false"> League of Legends </string>
@@ -54,6 +63,7 @@
     <!-- Inputs -->
     <string name="str_category_input"> Category </string>
     <string name="str_search_input"> Search </string>
+    <string name="str_total_placeholder" translatable="false"> Total: </string>
     <!-- Category Carrousel -->
 
     <string name="str_activity_input"> Activity </string>
@@ -67,7 +77,8 @@
     <string name="str_talk_type"> Talks </string>
 
     <string name="str_server_input"> Server </string>
-    <string name="str_server_placeholder"> Server`s link </string>
+    <string name="str_server_placeholder"> Server`s link&#8230; </string>
+    <string name="str_add_input"> Schedule </string>
 
     <string name="str_time_input"> Date and Hour </string>
     <string name="str_date_input"> Day / Month </string>

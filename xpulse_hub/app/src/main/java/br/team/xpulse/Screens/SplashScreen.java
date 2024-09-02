@@ -1,4 +1,4 @@
-package br.team.xpulse;
+package br.team.xpulse.Screens;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import br.team.xpulse.R;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -64,5 +66,7 @@ public class SplashScreen extends AppCompatActivity {
             });
             splashScreen.startAnimation(fadeOut);
         }, SPLASH_DISPLAY_LENGTH);
+
+
     }
 }

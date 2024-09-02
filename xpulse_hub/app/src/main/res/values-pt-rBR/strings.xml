@@ -40,15 +40,16 @@
         <string name="str_user_guest"> Convidado </string>
 
     <!-- AddMatch Screen -->
-    <string name="str_add_match"> Schedule Match </string>
+    <string name="str_add_match"> Partidas Ranqueada </string>
 
     <!-- Inputs -->
-    <string name="str_category_input"> Category </string>
+    <string name="str_category_input"> Categoria </string>
     <string name="str_search_input"> Pesquisar </string>
+    <string name="str_add_input"> Agendar </string>
     <!-- Category Carrousel -->
 
-    <string name="str_activity_input"> Activity </string>
-    <string name="str_activity_placeholder"> Select an activity </string>
+    <string name="str_activity_input"> Atividade </string>
+    <string name="str_activity_placeholder"> Selecione uma atividade </string>
 
     <!-- Activity Drawer -->
     <string name="str_league_type"> MOBA </string>
@@ -58,7 +59,7 @@
     <string name="str_talk_type"> Conversa </string>
 
     <string name="str_server_input"> Servidor </string>
-    <string name="str_server_placeholder"> Link do Servidor </string>
+    <string name="str_server_placeholder"> Link do Servidor&#8230; </string>
 
     <string name="str_time_input"> Data e Hora </string>
     <string name="str_date_input"> Dia / Mês </string>

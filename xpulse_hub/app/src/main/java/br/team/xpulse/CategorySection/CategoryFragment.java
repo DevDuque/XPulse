@@ -29,7 +29,7 @@ public class CategoryFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
-        String[] buttonTexts = {"Button 1", "Button 2", "Button 3", "Button 4", "Button 5"};
+        String[] buttonTexts = getResources().getStringArray(R.array.button_texts);
         ButtonAdapter adapter = new ButtonAdapter(buttonTexts);
         recyclerView.setAdapter(adapter);
     }
