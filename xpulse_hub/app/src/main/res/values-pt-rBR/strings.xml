@@ -10,7 +10,7 @@
     <string name="str_loginGoog"> Entrar com Google </string>
 
     <!-- Home Screen -->
-    <string name="str_img_title"> Hora de explorar novas dimensões </string>
+    <string name="str_img_title"> Hora de explorar\nnovas dimensões </string>
     <string name="str_img_subtitle"> Hora de se unir no portal místico e desbravar o desconhecido. </string>
 
     <string name="str_clearFilter"> Limpar filtros </string>

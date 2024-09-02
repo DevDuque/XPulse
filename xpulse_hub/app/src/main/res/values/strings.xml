@@ -12,7 +12,7 @@
     <string name="str_loginGoog"> Login with Google </string>
 
     <!-- Home Screen -->
-    <string name="str_img_title"> Time to Explore New Dimensions </string>
+    <string name="str_img_title"> Time to Explore\nNew Dimensions </string>
     <string name="str_img_subtitle"> Time to unite in the mystical portal and venture into the unknown </string>
 
     <string name="str_clearFilter"> Clean filters </string>
