@@ -53,6 +53,7 @@
 
     <!-- Inputs -->
     <string name="str_category_input"> Category </string>
+    <string name="str_search_input"> Search </string>
     <!-- Category Carrousel -->
 
     <string name="str_activity_input"> Activity </string>
