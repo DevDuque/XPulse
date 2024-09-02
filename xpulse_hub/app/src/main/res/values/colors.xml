@@ -10,5 +10,6 @@
     <color name="btn_end_color"> #FF0F1923 </color>
     <color name="btn_start_color"> #000F1923 </color>
 
+
     <color name="tab_color"> #0F1923</color>
 </resources>
