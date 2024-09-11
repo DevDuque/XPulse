@@ -1,6 +1,10 @@
 package br.team.xpulse.Model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import java.util.Date;
+import java.util.Locale;
 
 public class Room {
 
@@ -11,59 +15,30 @@ public class Room {
     private Activity activity;
     private String description;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public Room(String name, String category, String server, Date dateTime, Activity activity, String description) {
         this.name = name;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
         this.category = category;
-    }
-
-    public String getServer() {
-        return server;
-    }
-
-    public void setServer(String server) {
         this.server = server;
-    }
-
-    public Date getDateTime() {
-        return dateTime;
-    }
-
-    public void setDateTime(Date dateTime) {
         this.dateTime = dateTime;
-    }
-
-    public Activity getActivity() {
-        return activity;
-    }
-    public void setActivity(Activity activity) {
-        this.activity = activity;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Room(String name, String category, String server, Activity activity, String description) {
-        this.name = name;
-        this.category = category;
-        this.server = server;
-        this.dateTime = new Date();
         this.activity = activity;
         this.description = description;
+    }
+
+    // Getters e setters...
+
+    @Override
+    public String toString() {
+        // Formata a data no formato desejado
+        SimpleDateFormat formatter = new SimpleDateFormat("EEE - dd/MM - HH:mm", Locale.getDefault());
+        String formattedDate = formatter.format(dateTime);
+
+        return "Room{" +
+                "name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", server='" + server + '\'' +
+                ", dateTime=" + formattedDate +
+                ", activity=" + activity.toString() +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

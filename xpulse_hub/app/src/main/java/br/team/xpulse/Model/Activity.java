@@ -45,4 +45,14 @@ public class Activity {
         this.type = type;
         this.activityName = activityName;
     }
+
+    @Override
+    public String toString() {
+        return "Activity{" +
+                "activityName='" + activityName + '\'' +
+                ", type='" + type + '\'' +
+                ", photoID=" + photoID +
+                ", maxPlayers=" + maxPlayers +
+                '}';
+    }
 }
