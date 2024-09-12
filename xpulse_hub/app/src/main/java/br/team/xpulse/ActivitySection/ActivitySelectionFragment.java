@@ -58,13 +58,15 @@ public class ActivitySelectionFragment extends BottomSheetDialogFragment {
     }
 
     private List<Activity> getActivities() {
-        // Placeholder data
+
         List<Activity> activities = new ArrayList<>();
         activities.add(new Activity("League of Legends", "MOBA", 5, R.drawable.ic_league));
         activities.add(new Activity("Valorant", "FPS", 5, R.drawable.ic_valorant));
         activities.add(new Activity("Warzone", "FPS", 5, R.drawable.ic_warzone));
+        activities.add(new Activity("Minecraft", "Survival", 12, R.drawable.ic_minecraft));
+        activities.add(new Activity("Conversa", "Talk", 20, R.drawable.ic_talk));
 
-        // Add more activities as needed
+
         return activities;
     }
 }
