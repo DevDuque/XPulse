@@ -52,7 +52,6 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
             }
         });
 
-        // Continue with binding data to the ViewHolder if necessary
         holder.bind(activity, listener);
     }
 
