@@ -24,12 +24,6 @@ public class HomeScreen extends AppCompatActivity {
 
         setContentView(R.layout.activity_home_screen);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.home_screen), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
         btnAdd = findViewById(R.id.btn_add);
 
         btnAdd.setOnClickListener(v -> {

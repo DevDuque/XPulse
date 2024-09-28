@@ -16,30 +16,28 @@
 
     <!-- Header -->
     <LinearLayout android:id="@+id/header_title"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
         android:layout_margin="16dp"
 
-        android:orientation="horizontal" >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:src="@drawable/ic_user"
-
-            />
+            android:src="@drawable/ic_user" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-
-            android:orientation="vertical" >
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -61,43 +59,38 @@
                 android:textSize="20sp"
                 android:text="@string/str_casual_btn"
                 android:textColor="@color/text_color"
-                android:fontFamily="@font/rajdhani_semibold"
-                />
+                android:fontFamily="@font/rajdhani_semibold" />
         </LinearLayout>
 
-        <Space
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"/>
-
         <ImageButton android:id="@+id/btn_add"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:layout_gravity="end"
             android:src="@drawable/ic_add"
-            android:background="@android:color/transparent"
-            />
-
-
+            android:background="@android:color/transparent" />
     </LinearLayout>
 
     <!-- ImageSection-->
     <LinearLayout android:id="@+id/image_section"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_title"
-
         android:layout_marginVertical="24dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
 
         android:background="@color/tab_half_color"
 
         android:orientation="horizontal" >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
 
             android:orientation="vertical" >
 
@@ -131,10 +124,10 @@
 
         <ImageView
             android:layout_width="180dp"
-            android:layout_height="wrap_content"
+            android:layout_height="156dp"
+            android:layout_gravity="end"
 
-            android:src="@drawable/img_section"
-            />
+            android:src="@drawable/img_section" />
     </LinearLayout>
 
     <!-- Filter Section -->
@@ -142,51 +135,52 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginVertical="24dp"
 
         android:gravity="end"
 
-        app:layout_constraintTop_toBottomOf="@id/image_section"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_section"
 
         android:orientation="horizontal" >
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
 
             android:src="@drawable/ic_filter" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
 
-            android:text="@string/str_clearFilter"
-            android:textSize="12sp"
+            android:textSize="16sp"
             android:textColor="@color/text_color"
-            android:fontFamily="@font/rajdhani_bold"
-
-            android:layout_marginHorizontal="12dp" />
+            android:text="@string/str_clearFilter"
+            android:fontFamily="@font/rajdhani_bold" />
     </LinearLayout>
 
-    <!-- Category Carousel -->
     <FrameLayout android:id="@+id/category_section"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
 
-        app:layout_constraintTop_toBottomOf="@id/filter_section"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/filter_section">
 
-        <fragment
-            android:id="@+id/category_fragment"
-            android:name="br.team.xpulse.CategorySection.CategoryFragment"
+        <fragment android:id="@+id/category_fragment"
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+
+            android:name="br.team.xpulse.CategorySection.CategoryFragment" />
 
     </FrameLayout>
+    <!-- Category Carousel -->
 
     <!-- Matches Section -->
     <LinearLayout android:id="@+id/matches_section"
@@ -207,7 +201,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:textSize="16sp"
+            android:textSize="24sp"
             android:text="@string/str_games_div"
             android:textColor="@color/text_color"
             android:fontFamily="@font/rajdhani_bold" />
@@ -223,22 +217,22 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
 
-            android:textSize="12sp"
+            android:textSize="16sp"
             android:text="@string/str_total_placeholder"
             android:textColor="@color/text_color"
             android:fontFamily="@font/rajdhani_bold" />
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_height="match_parent"
             android:layout_marginEnd="8dp"
 
             android:paddingHorizontal="16dp"
 
-            android:drawableEnd="@drawable/ic_search"
             android:drawablePadding="16dp"
+            android:drawableEnd="@drawable/ic_search"
 
-            android:textSize="12sp"
+            android:textSize="16sp"
             android:textColor="@color/text_color"
 
             android:hint="@string/str_search_input"
@@ -261,20 +255,20 @@
 
         <ImageView android:id="@+id/img_empty"
             android:layout_width="match_parent"
-            android:layout_height="280dp"
+            android:layout_height="wrap_content"
 
             android:src="@drawable/img_empty" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
 
             android:gravity="center"
 
-            android:textSize="20sp"
-            android:text="@string/str_games_empty"
+            android:textSize="24sp"
             android:textColor="@color/text_color"
+            android:text="@string/str_games_empty"
             android:fontFamily="@font/rajdhani_bold" />
     </LinearLayout>
 

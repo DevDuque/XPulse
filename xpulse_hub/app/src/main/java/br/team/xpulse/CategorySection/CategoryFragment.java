@@ -26,7 +26,7 @@ public class CategoryFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = view.findViewById(R.id.recycler_categories);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
         String[] buttonTexts = getResources().getStringArray(R.array.button_texts);

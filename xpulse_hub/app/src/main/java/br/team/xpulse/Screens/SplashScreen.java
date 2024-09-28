@@ -28,13 +28,6 @@ public class SplashScreen extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash_screen);
 
-        // Responsividade da tela
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.splash_screen), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
         // Encontra a raiz da SplashScreen
         View splashScreen = findViewById(R.id.splash_screen);
 

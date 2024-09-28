@@ -211,7 +211,6 @@
             <EditText android:id="@+id/server_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
 
                 android:padding="16dp"
 
@@ -263,8 +262,9 @@
                 android:orientation="horizontal" >
 
                 <EditText android:id="@+id/date_input"
-                    android:layout_width="168dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:background="@drawable/btn_gradient"
 
                     android:padding="16dp"
@@ -279,8 +279,9 @@
                     android:textColorHint="@color/placeholder_color" />
 
                 <EditText android:id="@+id/hour_input"
-                    android:layout_width="168dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:background="@drawable/btn_gradient"
 
                     android:padding="16dp"
@@ -334,6 +335,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
                     android:layout_marginEnd="24dp"
 
                     android:textSize="12sp"
@@ -347,7 +349,7 @@
             </LinearLayout>
 
             <EditText android:id="@+id/description_input"
-                android:layout_width="368dp"
+                android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="16dp"
 

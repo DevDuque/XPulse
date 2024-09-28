@@ -16,15 +16,17 @@
     tools:context=".Screens.MainActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:src="@drawable/img_login"
-        />
+        android:scaleType="centerCrop"
+
+        android:src="@drawable/img_login" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
 
         android:gravity="center"
 
@@ -36,21 +38,26 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
 
         android:gravity="center"
 
-        android:textSize="16sp"
+        android:textSize="24sp"
         android:text="@string/str_subtitle"
         android:textColor="@color/text_color"
         android:fontFamily="@font/rajdhani_medium"
         />
 
     <Button android:id="@+id/login_disc"
+
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
 
         android:drawableLeft="@drawable/ic_disc"
         android:backgroundTint="@color/primary_color"
+
+        android:drawablePadding="24dp"
 
         android:textSize="20sp"
         android:text="@string/str_loginDisc"
