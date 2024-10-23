@@ -306,13 +306,14 @@
             app:layout_constraintTop_toBottomOf="@id/date_hour_input"
 
             android:layout_marginTop="32dp"
-            android:layout_marginStart="24dp"
+            android:layout_marginHorizontal="24dp"
 
             android:orientation="vertical" >
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:orientation="horizontal">
 
                 <TextView
@@ -331,34 +332,36 @@
                     android:layout_height="2dp"
                     android:layout_weight="1" />
 
-                <TextView android:id="@+id/description_max"
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginEnd="24dp"
-
-                    android:textSize="12sp"
-                    android:text="@string/str_description_max"
-                    android:textColor="@color/text_color"
-                    android:fontFamily="@font/rajdhani_medium"
-
-                    android:layout_gravity="center_vertical"
-                    />
-
             </LinearLayout>
 
-            <EditText android:id="@+id/description_input"
+            <com.google.android.material.textfield.TextInputLayout
+
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
 
-                android:background="@drawable/btn_gradient"
+                app:counterEnabled="true"
+                app:errorEnabled="true"
+                app:counterMaxLength="100"
 
-                android:textSize="12sp"
-                android:textColor="@color/text_color"
-                android:textColorHint="@color/placeholder_color"
-                />
+                app:counterTextColor="@color/text_color"
+                app:counterOverflowTextColor="@color/primary_color"
+
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText  android:id="@+id/description_input"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:gravity="top|start"
+
+
+                    android:background="@drawable/btn_gradient"
+
+                    android:textSize="12sp"
+                    android:textColor="@color/text_color"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 

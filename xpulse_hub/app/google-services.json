@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "542250568086",
-    "project_id": "xpulse-31bd6",
-    "storage_bucket": "xpulse-31bd6.appspot.com"
+    "project_number": "195649619208",
+    "project_id": "xpulse-cbb5c",
+    "storage_bucket": "xpulse-cbb5c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:542250568086:android:1d3a20ff1e76b1b3ea35b7",
+        "mobilesdk_app_id": "1:195649619208:android:c6dc3f53da23f8a7f2d8bd",
         "android_client_info": {
           "package_name": "br.team.xpulse"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA7IIwVhop3m-qzeyzj53aznDQclL8XDIg"
+          "current_key": "AIzaSyA1WV-pPb5oFORliByXMy6UTRarlPxnkF4"
         }
       ],
       "services": {
