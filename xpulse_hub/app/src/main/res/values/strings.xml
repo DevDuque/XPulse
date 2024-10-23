@@ -82,7 +82,7 @@
 
     <string name="str_time_input"> Date and Hour </string>
     <string name="str_date_input"> Day / Month </string>
-    <string name="str_hour_input"> Hour / Min </string>
+    <string name="str_hour_input"> Hour:Min </string>
 
     <string name="str_description_input"> Description </string>
     <string name="str_description_max"> Max: 100 characters </string>
