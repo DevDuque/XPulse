@@ -227,25 +227,6 @@
             android:text="@string/str_total_placeholder"
             android:textColor="@color/text_color"
             android:fontFamily="@font/rajdhani_bold" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
-
-            android:paddingHorizontal="16dp"
-
-            android:drawablePadding="16dp"
-            android:drawableEnd="@drawable/ic_search"
-
-            android:textSize="16sp"
-            android:textColor="@color/text_color"
-
-            android:hint="@string/str_search_input"
-            android:textColorHint="@color/placeholder_color"
-
-            android:background="@drawable/btn_gradient"
-            />
     </LinearLayout>
 
     <LinearLayout

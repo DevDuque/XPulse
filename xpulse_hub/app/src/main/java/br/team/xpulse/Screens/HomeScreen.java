@@ -2,6 +2,7 @@ package br.team.xpulse.Screens;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -42,6 +43,8 @@ public class HomeScreen extends AppCompatActivity {
 
         icUser.setOnClickListener(v -> {
 
+            Log.d("FirebaseAnalytics", "icUser clicked!");
+
             String id = "";
             String name = "";
 
@@ -49,7 +52,14 @@ public class HomeScreen extends AppCompatActivity {
             bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
             bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
             bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
+
+            Log.d("FirebaseAnalytics", "Bundle Content: " +
+                    "ITEM_ID: " + bundle.getString(FirebaseAnalytics.Param.ITEM_ID) + ", " +
+                    "ITEM_NAME: " + bundle.getString(FirebaseAnalytics.Param.ITEM_NAME) + ", " +
+                    "CONTENT_TYPE: " + bundle.getString(FirebaseAnalytics.Param.CONTENT_TYPE));
+
             mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+
         });
 
 
