@@ -13,10 +13,10 @@ import java.util.List;
 
 import br.team.xpulse.Model.Room;
 import br.team.xpulse.R;
-
 public class RoomFragment extends Fragment implements RoomAdapter.OnRoomClickListener {
 
     private List<Room> roomList; // Lista de salas
+    private RoomAdapter roomAdapter; // Adicione esta linha
 
     public RoomFragment() {
     }
@@ -28,6 +28,7 @@ public class RoomFragment extends Fragment implements RoomAdapter.OnRoomClickLis
         fragment.setArguments(args);
         return fragment;
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,14 +43,19 @@ public class RoomFragment extends Fragment implements RoomAdapter.OnRoomClickLis
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_room_list, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recyclerViewRooms);
-        RoomAdapter roomAdapter = new RoomAdapter(roomList, this);
+
+        roomAdapter = new RoomAdapter(roomList, this); // Armazene o adapter aqui
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(roomAdapter);
+
         return view;
+    }
+
+    public RoomAdapter getAdapter() { // Adicione este método
+        return roomAdapter;
     }
 
     @Override
     public void onRoomClick(Room room) {
     }
-
 }

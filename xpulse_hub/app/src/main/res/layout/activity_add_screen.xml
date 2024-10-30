@@ -262,10 +262,14 @@
                 android:orientation="horizontal" >
 
                 <EditText android:id="@+id/date_input"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:background="@drawable/btn_gradient"
+
+                    android:inputType="date"
 
                     android:padding="16dp"
 
@@ -279,9 +283,13 @@
                     android:textColorHint="@color/placeholder_color" />
 
                 <EditText android:id="@+id/hour_input"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
+                    android:inputType="time"
+
                     android:background="@drawable/btn_gradient"
 
                     android:padding="16dp"

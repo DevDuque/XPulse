@@ -99,8 +99,6 @@ public class AddScreen extends AppCompatActivity {
         if (selectedActivity != null) {
             try {
                 Date dateTime = createDateTime(date, hour);
-
-                // Obtém o CategoryFragment para acessar as tags selecionadas
                 List<String> selectedTags = getSelectedTags();
 
                 // Cria uma nova instância de Room com os dados fornecidos e as tags selecionadas
@@ -115,17 +113,17 @@ public class AddScreen extends AppCompatActivity {
                 Intent intent = new Intent(this, HomeScreen.class);
                 intent.putExtra("roomBundle", bundle); // Adiciona o Bundle ao Intent
 
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Limpando a árvore de Activities
                 startActivity(intent); // Inicia a HomeScreen
 
             } catch (ParseException e) {
                 Log.e(TAG, "Erro ao analisar data e hora", e);
+                Toast.makeText(this, "Formato de data/hora inválido.", Toast.LENGTH_SHORT).show();
             }
         } else {
             Log.d(TAG, "Nenhuma atividade selecionada");
+            Toast.makeText(this, "Por favor, selecione uma atividade.", Toast.LENGTH_SHORT).show();
         }
     }
-
 
     private Date createDateTime(String date, String hour) throws ParseException {
         // Combina a data (dd/MM) e a hora (HH:mm) com o ano atual

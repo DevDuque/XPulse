@@ -6,30 +6,23 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
-
-import com.google.firebase.analytics.FirebaseAnalytics;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import br.team.xpulse.Model.Room;
 import br.team.xpulse.R;
 import br.team.xpulse.Utils.RoomSection.RoomFragment;
+import br.team.xpulse.Utils.RoomSection.RoomManager;
 
 public class HomeScreen extends AppCompatActivity {
 
-    private FirebaseAnalytics mFirebaseAnalytics;
-    private List<Room> roomList = new ArrayList<>(); // Lista para armazenar as salas
+    private ImageButton btnAdd;
 
-    ImageButton btnAdd;
+    private static final String TAG = "HomeScreen"; // Tag para logs
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home_screen);
 
         btnAdd = findViewById(R.id.btn_add);
@@ -44,32 +37,33 @@ public class HomeScreen extends AppCompatActivity {
             Room receivedRoom = (Room) bundle.getSerializable("newRoom");
             if (receivedRoom != null) {
                 Log.d("HomeScreen", "Room Received: " + receivedRoom.toString());
-                addRoomToList(receivedRoom);
+                RoomManager.getInstance().addRoom(receivedRoom);
                 updateRoomFragment();
             }
         }
 
-        // Inicializa o fragmento com a lista vazia ao iniciar
+        // Inicializa o fragmento com a lista do RoomManager
         updateRoomFragment();
     }
 
-    private void addRoomToList(Room room) {
-        roomList.add(room);
-    }
-
     private void updateRoomFragment() {
-        RoomFragment roomFragment = RoomFragment.newInstance(roomList);
+        RoomFragment roomFragment = RoomFragment.newInstance(RoomManager.getInstance().getRoomList());
+
+        // Substituir o fragmento na transação
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_rooms, roomFragment);
         transaction.commit();
 
-        // Verifica se a lista de salas está vazia
-        if (roomList.isEmpty()) {
-            findViewById(R.id.fragment_rooms).setVisibility(View.GONE);  // Esconde o fragmento
-            findViewById(R.id.image_empty).setVisibility(View.VISIBLE); // Mostra a mensagem de vazio
+        // Verifique se há salas e atualize a visibilidade
+        if (RoomManager.getInstance().getRoomList().isEmpty()) {
+            findViewById(R.id.fragment_rooms).setVisibility(View.GONE);
+            findViewById(R.id.image_empty).setVisibility(View.VISIBLE);
         } else {
-            findViewById(R.id.fragment_rooms).setVisibility(View.VISIBLE); // Mostra o fragmento
-            findViewById(R.id.image_empty).setVisibility(View.GONE);      // Esconde a mensagem de vazio
+            findViewById(R.id.fragment_rooms).setVisibility(View.VISIBLE);
+            findViewById(R.id.image_empty).setVisibility(View.GONE);
         }
     }
+
+
+
 }
