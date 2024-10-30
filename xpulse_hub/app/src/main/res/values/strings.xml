@@ -85,7 +85,7 @@
     <string name="str_hour_input"> Hour:Min </string>
 
     <string name="str_description_input"> Description </string>
-    <string name="str_description_max"> Max: 100 characters </string>
+    <string name="str_max_tags"> You can only select TWO tags!</string>
 
 
 </resources>
