@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView android:id="@+id/img_activity"
+
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+
+        android:layout_margin="16dp"
+
+        android:src="@drawable/ic_league" />
+
+    <TextView android:id="@+id/lblTitle"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toEndOf="@id/img_activity"
+        android:layout_alignTop="@id/img_activity"
+
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:text="League of Legends"
+        android:textColor="@color/secondary_color"
+        android:fontFamily="@font/rajdhani_semibold" />
+
+    <TextView android:id="@+id/lblType"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/img_activity"
+
+        android:layout_marginEnd="24dp"
+
+        android:textSize="18sp"
+        android:text="Ranqueada"
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/rajdhani_regular" />
+
+    <TextView android:id="@+id/lblMax"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/lblType"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginEnd="24dp"
+
+        android:layout_marginTop="16dp"
+
+        android:gravity="center"
+
+        app:drawableStartCompat="@drawable/ic_people"
+        android:drawablePadding="8dp"
+
+        android:textSize="13sp"
+        android:textAllCaps="true"
+        android:textColor="@color/text_color"
+        android:text="Max. 5"
+        android:fontFamily="@font/rajdhani_bold" />
+
+    <TextView android:id="@+id/lblDate"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_below="@+id/lblTitle"
+        android:layout_toEndOf="@id/img_activity"
+
+        android:layout_marginTop="16dp"
+
+        android:gravity="center"
+
+        app:drawableStartCompat="@drawable/ic_calendar"
+        android:drawablePadding="8dp"
+
+        android:textSize="13sp"
+        android:textAllCaps="true"
+        android:textColor="@color/text_color"
+        android:text="Ter - 03/12 - 19:00"
+        android:fontFamily="@font/rajdhani_bold" />
+
+    <View android:id="@+id/line"
+
+        android:layout_width="240dp"
+        android:layout_height="1dp"
+
+        android:layout_marginVertical="40dp"
+        android:layout_below="@id/lblMax"
+        android:layout_alignParentEnd="true"
+
+        android:background="@color/secondary_color" />
+
+</RelativeLayout>

@@ -1,6 +1,4 @@
-package br.team.xpulse.ActivitySection;
-
-import static android.app.PendingIntent.getActivities;
+package br.team.xpulse.Utils.ActivitySection;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,8 +20,7 @@ import br.team.xpulse.R;
 public class ActivitySelectionFragment extends BottomSheetDialogFragment {
 
     private OnActivitySelectedListener listener;
-    private List<Activity> activities;
-    private List<Room> rooms; // Your list of rooms
+    private List<Room> rooms;
 
     public interface OnActivitySelectedListener {
         void onActivitySelected(Activity activity);
@@ -37,16 +34,13 @@ public class ActivitySelectionFragment extends BottomSheetDialogFragment {
         RecyclerView recyclerView = view.findViewById(R.id.recycler_games);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        activities = getActivities();
+        List<Activity> activities = getActivities();
 
-        ActivityAdapter adapter = new ActivityAdapter(getContext(), activities, new ActivityAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(Activity activity) {
-                if (listener != null) {
-                    listener.onActivitySelected(activity);
-                }
-                dismiss();
+        ActivityAdapter adapter = new ActivityAdapter(getContext(), activities, activity -> {
+            if (listener != null) {
+                listener.onActivitySelected(activity);
             }
+            dismiss();
         });
         recyclerView.setAdapter(adapter);
 

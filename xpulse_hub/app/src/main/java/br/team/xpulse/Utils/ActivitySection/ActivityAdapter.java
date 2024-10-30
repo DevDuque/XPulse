@@ -1,4 +1,4 @@
-package br.team.xpulse.ActivitySection;
+package br.team.xpulse.Utils.ActivitySection;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -18,8 +18,8 @@ import br.team.xpulse.R;
 
 public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHolder> {
 
-    private List<Activity> activities;
-    private OnItemClickListener listener;
+    private final List<Activity> activities;
+    private final OnItemClickListener listener;
 
     public interface OnItemClickListener {
         void onItemClick(Activity activity);
@@ -45,12 +45,7 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
         ActivityFragment fragment = ActivityFragment.newInstance(activity.getActivityName(), activity.getType(), activity.getPhotoID(), activity.getMaxPlayers());
 
         // Configurando o listener para o fragmento
-        fragment.setOnFragmentClickListener(new ActivityFragment.OnFragmentClickListener() {
-            @Override
-            public void onFragmentClick(Activity clickedActivity) {
-                listener.onItemClick(clickedActivity);
-            }
-        });
+        fragment.setOnFragmentClickListener(listener::onItemClick);
 
         holder.bind(activity, listener);
     }
@@ -81,12 +76,7 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
             lblType.setText(activity.getType());
             lblMax.setText(String.valueOf(activity.getMaxPlayers()));
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listener.onItemClick(activity);
-                }
-            });
+            itemView.setOnClickListener(v -> listener.onItemClick(activity));
 
             imgForward.setOnClickListener(new View.OnClickListener() {
                 @Override

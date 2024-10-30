@@ -1,10 +1,9 @@
-package br.team.xpulse.ActivitySection;
+package br.team.xpulse.Utils.ActivitySection;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,8 +14,6 @@ import br.team.xpulse.R;
 
 public class ActivityFragment extends Fragment {
 
-    private ImageView imgActivity;
-    private TextView lblTitle, lblType, lblMax;
     private String activityName;
     private String type;
     private Integer photoID;
@@ -65,10 +62,10 @@ public class ActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_details, container, false);
 
-        imgActivity = view.findViewById(R.id.img_activity);
-        lblTitle = view.findViewById(R.id.lblTitle);
-        lblType = view.findViewById(R.id.lblType);
-        lblMax = view.findViewById(R.id.lblMax);
+        ImageView imgActivity = view.findViewById(R.id.img_activity);
+        TextView lblTitle = view.findViewById(R.id.lblTitle);
+        TextView lblType = view.findViewById(R.id.lblType);
+        TextView lblMax = view.findViewById(R.id.lblMax);
 
         imgActivity.setImageResource(photoID);
         lblTitle.setText(activityName);
