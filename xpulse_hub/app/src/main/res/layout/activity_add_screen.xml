@@ -64,6 +64,17 @@
                 android:fontFamily="@font/rajdhani_bold" />
         </LinearLayout>
 
+        <View android:id="@+id/line"
+
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_layout"
+
+            android:background="@color/secondary_color" />
+
         <!-- Category Input -->
         <LinearLayout android:id="@+id/category_input"
             android:layout_width="match_parent"
@@ -71,7 +82,7 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header_layout"
+            app:layout_constraintTop_toBottomOf="@id/line"
 
             android:layout_marginTop="16dp"
             android:layout_marginStart="24dp"

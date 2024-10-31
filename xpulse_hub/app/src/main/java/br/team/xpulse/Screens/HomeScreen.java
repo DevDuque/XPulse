@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -17,6 +18,7 @@ import br.team.xpulse.Utils.RoomSection.RoomManager;
 public class HomeScreen extends AppCompatActivity {
 
     private ImageButton btnAdd;
+    private TextView lblTotal;
 
     private static final String TAG = "HomeScreen"; // Tag para logs
 
@@ -30,6 +32,8 @@ public class HomeScreen extends AppCompatActivity {
             Intent intent = new Intent(HomeScreen.this, AddScreen.class);
             startActivity(intent);
         });
+
+        lblTotal = findViewById(R.id.matches_count);
 
         // Recebe o Bundle enviado de AddScreen
         Bundle bundle = getIntent().getBundleExtra("roomBundle");
@@ -61,9 +65,8 @@ public class HomeScreen extends AppCompatActivity {
         } else {
             findViewById(R.id.fragment_rooms).setVisibility(View.VISIBLE);
             findViewById(R.id.image_empty).setVisibility(View.GONE);
+
+            lblTotal.setText("Total: " + RoomManager.getInstance().getRoomList().size());
         }
     }
-
-
-
 }
