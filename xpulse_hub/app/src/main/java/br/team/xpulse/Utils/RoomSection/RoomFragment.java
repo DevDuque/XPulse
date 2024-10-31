@@ -1,5 +1,6 @@
 package br.team.xpulse.Utils.RoomSection;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,6 +14,10 @@ import java.util.List;
 
 import br.team.xpulse.Model.Room;
 import br.team.xpulse.R;
+import br.team.xpulse.Screens.HomeScreen;
+import br.team.xpulse.Screens.MainActivity;
+import br.team.xpulse.Screens.RoomScreen;
+
 public class RoomFragment extends Fragment implements RoomAdapter.OnRoomClickListener {
 
     private List<Room> roomList; // Lista de salas
@@ -57,5 +62,8 @@ public class RoomFragment extends Fragment implements RoomAdapter.OnRoomClickLis
 
     @Override
     public void onRoomClick(Room room) {
+        Intent intent = new Intent(getContext(), RoomScreen.class);
+
+        startActivity(intent);
     }
 }
