@@ -60,6 +60,17 @@
             android:text="@string/str_league"
             android:textColor="@color/text_color"
             android:fontFamily="@font/rajdhani_bold" />
+
+        <ImageButton android:id="@+id/btn_share"
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+
+            android:src="@drawable/ic_share"
+            android:background="@android:color/transparent" />
     </LinearLayout>
 
     <View android:id="@+id/line"
@@ -82,7 +93,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
-            <ImageView
+            <ImageView android:id="@+id/room_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -106,7 +117,7 @@
                 android:layout_marginBottom="24dp">
 
                 <TextView android:id="@+id/lbl_name"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
                     android:textSize="32sp"
@@ -116,8 +127,8 @@
                     android:text="@string/str_league"
                     android:textColor="@color/text_color" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <TextView android:id="@+id/lbl_description"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
 
@@ -139,7 +150,7 @@
                 android:background="@color/secondary_color" />
         </FrameLayout>
 
-        <!-- Matches Section -->
+        <!-- Users Section -->
         <LinearLayout android:id="@+id/matches_section"
 
             android:layout_width="match_parent"
@@ -168,7 +179,7 @@
                 android:layout_height="2dp"
                 android:layout_weight="1" />
 
-            <TextView android:id="@+id/matches_count"
+            <TextView android:id="@+id/users_count"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -190,7 +201,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <Button android:id="@+id/login_disc"
+        <Button android:id="@+id/btn_disc"
 
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -221,7 +232,7 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_add_match" />
+            app:layout_constraintTop_toBottomOf="@id/btn_disc" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

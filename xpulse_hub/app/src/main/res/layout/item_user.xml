@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/tab_color">
+
+    <ImageView android:id="@+id/img_activity"
+
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+        android:layout_margin="16dp"
+
+        android:src="@drawable/ic_league"
+        />
+
+    <TextView android:id="@+id/lblName"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toEndOf="@id/img_activity"
+        android:layout_alignTop="@id/img_activity"
+
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:text="League of Legends"
+        android:textColor="@color/secondary_color"
+        android:fontFamily="@font/rajdhani_semibold" />
+
+    <TextView android:id="@+id/lblType"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/lblName"
+
+        android:layout_marginVertical="12dp"
+
+        android:layout_toEndOf="@id/img_activity"
+
+        android:textSize="13sp"
+        android:textAllCaps="true"
+        android:textColor="@color/text_color"
+        android:text="@string/str_league_type"
+        android:fontFamily="@font/rajdhani_bold" />
+
+    <ImageButton android:id="@+id/imgForward"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+
+        android:background="@android:color/transparent"
+
+        android:src="@drawable/ic_forward" />
+
+    <View android:id="@+id/line"
+
+        android:layout_width="240dp"
+        android:layout_height="1dp"
+
+        android:layout_marginVertical="24dp"
+        android:layout_below="@id/lblType"
+        android:layout_alignParentEnd="true"
+
+        android:background="@color/secondary_color" />
+
+</RelativeLayout>
