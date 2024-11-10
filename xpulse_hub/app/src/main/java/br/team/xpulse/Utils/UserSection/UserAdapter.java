@@ -35,6 +35,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         User user = users.get(position);
         holder.nameTextView.setText(user.getName());
         holder.availabilityTextView.setText(user.getAvailability());
+        holder.typeTextView.setText(user.getType());
     }
 
     @Override
@@ -44,14 +45,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
     // ViewHolder que mantém as views de cada item
     public static class UserViewHolder extends RecyclerView.ViewHolder {
-        TextView nameTextView, availabilityTextView;
+        TextView nameTextView, availabilityTextView, typeTextView;
         ImageView imgActivity;
 
         public UserViewHolder(View itemView) {
             super(itemView);
             imgActivity = itemView.findViewById(R.id.img_activity);
             nameTextView = itemView.findViewById(R.id.lblName);
-            availabilityTextView = itemView.findViewById(R.id.lblType);
+            availabilityTextView = itemView.findViewById(R.id.lblAvailability);
+            typeTextView = itemView.findViewById(R.id.lblType);
         }
     }
 }

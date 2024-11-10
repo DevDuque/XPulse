@@ -8,22 +8,19 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.fragment.app.FragmentTransaction;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import br.team.xpulse.Model.Room;
 import br.team.xpulse.R;
+import br.team.xpulse.Utils.UserSection.PlayersFragment;
 
 public class RoomScreen extends AppCompatActivity {
 
     private TextView lblTitle, lblDescription, lblName;
     private ImageButton btnShare, btnBack;
-
     private Button btnDisc;
-
     private ImageView roomImage;
 
     @Override
@@ -57,44 +54,16 @@ public class RoomScreen extends AppCompatActivity {
                 setActivityImage(room.getActivity().getActivityName());
 
                 // Configurando o botão de compartilhar
-                btnShare.setOnClickListener(v -> {
-                    // Chamando o método de compartilhamento
-                    shareRoom(room);
-                });
+                btnShare.setOnClickListener(v -> shareRoom(room));
 
-                btnBack.setOnClickListener(v -> {
-                    finish();
-                });
+                btnBack.setOnClickListener(v -> finish());
 
-                btnDisc.setOnClickListener(v -> {
-                    // Pegando a URL do servidor diretamente de room.getServer()
-                    String serverUrl = room.getServer();  // Assume que getServer() retorna uma URL
-
-                    // Verifica se a URL não é nula ou vazia
-                    if (serverUrl != null && !serverUrl.isEmpty()) {
-                        try {
-                            // Tenta converter a URL em um Uri
-                            Uri uri = Uri.parse(serverUrl);
-
-                            // Cria a Intent para abrir a URL no navegador
-                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-
-                            // Tenta iniciar a Activity para abrir a URL
-                            startActivity(intent);
-                        } catch (Exception e) {
-                            // Caso haja algum erro (ex: formato inválido de URL), exibe um Toast
-                            Toast.makeText(RoomScreen.this, "Erro ao abrir o servidor", Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        // Caso o serverUrl seja nulo ou vazio
-                        Toast.makeText(RoomScreen.this, "Servidor não disponível", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-
-
+                btnDisc.setOnClickListener(v -> openServer(room));
             }
         }
+
+        // Adicionando o PlayersFragment dinamicamente ao FrameLayout
+        addPlayersFragment();
     }
 
     // Método para definir a imagem da atividade com base no nome
@@ -116,7 +85,6 @@ public class RoomScreen extends AppCompatActivity {
                 roomImage.setImageResource(R.drawable.img_empty);
                 break;
             default:
-                // Caso a atividade não corresponda a nenhuma das opções acima, você pode colocar uma imagem padrão
                 roomImage.setImageResource(R.drawable.ic_calendar);
                 break;
         }
@@ -124,29 +92,52 @@ public class RoomScreen extends AppCompatActivity {
 
     // Método para compartilhar as informações da sala
     private void shareRoom(Room room) {
-        // Criando a string de texto a ser compartilhada
         String roomInfo = "Room Info:\n" +
                 "Name: " + room.getName() + "\n" +
                 "Activity: " + room.getActivity().getActivityName() + "\n" +
                 "Description: " + room.getDescription() + "\n" +
                 "Tags: " + String.join(", ", room.getTags()) + "\n";
 
-        // Formatando a data para "dia/mês - hora:minuto"
-        Date date = room.getDateTime();  // Supondo que getDateTime() retorne um objeto Date
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM - HH:mm");  // Formato desejado
-        String formattedDate = dateFormat.format(date);
+        Date date = room.getDateTime();
+        if (date != null) {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM - HH:mm");
+            String formattedDate = dateFormat.format(date);
+            roomInfo += "Date: " + formattedDate;
+        }
 
-        roomInfo += "Date: " + formattedDate;
-
-        // Texto de compartilhamento
         String shareText = "XPulse: Check out this room from XPulse app!\n\n" + roomInfo;
 
-        // Criando o Intent de compartilhamento
+        // Intent para compartilhar
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.setType("text/plain");  // Tipo de conteúdo (texto simples)
-        shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);  // Passando o texto para o Intent
-
-        // Abrindo o seletor de apps para o usuário escolher onde compartilhar
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
         startActivity(Intent.createChooser(shareIntent, "Share room info via"));
+    }
+
+    // Método para abrir o servidor
+    private void openServer(Room room) {
+        String serverUrl = room.getServer();
+        if (serverUrl != null && !serverUrl.isEmpty()) {
+            try {
+                Uri uri = Uri.parse(serverUrl);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            } catch (Exception e) {
+                Toast.makeText(RoomScreen.this, "Erro ao abrir o servidor", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(RoomScreen.this, "Servidor não disponível", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    // Método para adicionar o PlayersFragment dinamicamente
+    private void addPlayersFragment() {
+        // Cria o fragmento de usuários
+        PlayersFragment playersFragment = PlayersFragment.newInstance();
+
+        // Realiza a transação de fragmentos para adicionar o fragmento ao FrameLayout
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_players, playersFragment);
+        transaction.commit();
     }
 }
