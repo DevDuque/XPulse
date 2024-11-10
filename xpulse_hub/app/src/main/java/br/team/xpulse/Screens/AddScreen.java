@@ -95,6 +95,13 @@ public class AddScreen extends AppCompatActivity {
             return; // Sai do método se os campos estiverem vazios
         }
 
+        // Verifica se a descrição excede 100 caracteres
+        if (description.length() > 100) {
+            // Exibe um erro no campo de descrição
+            descriptionInput.setError("A descrição não pode ter mais de 100 caracteres.");
+            return; // Sai do método se a descrição for muito longa
+        }
+
         // Verifica se uma atividade foi selecionada
         if (selectedActivity != null) {
             try {
