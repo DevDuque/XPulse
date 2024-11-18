@@ -232,12 +232,15 @@
     <FrameLayout android:id="@+id/fragment_rooms"
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+
         android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
 
         app:layout_constraintTop_toBottomOf="@id/matches_section"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <LinearLayout android:id="@+id/image_empty"
 
