@@ -51,21 +51,4 @@ public class Room implements Serializable {
     public List<String> getTags() {
         return tags;
     }
-
-    @Override
-    public String toString() {
-        // Formata a data no formato desejado
-        SimpleDateFormat formatter = new SimpleDateFormat("EEE - dd/MM - HH:mm", Locale.getDefault());
-        String formattedDate = formatter.format(dateTime);
-
-        return "Room \n {" +
-                "name='" + name + '\'' +
-                ", server='" + server + '\'' +
-                ", dateTime=" + formattedDate +
-                ", description='" + description + '\'' +
-                ", tags=" + tags +
-                "\n" + activity.toString() +
-                "} \n";
     }
-
-}

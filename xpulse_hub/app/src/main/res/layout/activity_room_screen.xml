@@ -109,7 +109,6 @@
 
                 android:gravity="bottom"
 
-
                 android:layout_gravity="bottom|center"
 
                 android:orientation="vertical"

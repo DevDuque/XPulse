@@ -93,8 +93,8 @@ public class RoomScreen extends AppCompatActivity {
     // Método para compartilhar as informações da sala
     private void shareRoom(Room room) {
         String roomInfo = "Room Info:\n" +
-                "Name: " + room.getName() + "\n" +
                 "Activity: " + room.getActivity().getActivityName() + "\n" +
+                "Server: " + room.getServer() + "\n" +
                 "Description: " + room.getDescription() + "\n" +
                 "Tags: " + String.join(", ", room.getTags()) + "\n";
 

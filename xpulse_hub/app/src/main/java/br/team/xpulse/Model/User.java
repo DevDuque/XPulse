@@ -4,12 +4,18 @@ public class User {
 
     private String name;
     private String availability;
-    private String Type;
+    private String type;
 
     public User(String name) {
         this.name = name;
         this.availability = "Available";
-        Type = "Guest";
+        type = "Guest";
+    }
+
+    public User(String name, String availability, String type) {
+        this.name = name;
+        this.availability = availability;
+        this.type = type;
     }
 
     public String getName() {
@@ -29,11 +35,11 @@ public class User {
     }
 
     public String getType() {
-        return Type;
+        return type;
     }
 
     public void setType(String type) {
-        Type = type;
+        this.type = type;
     }
 
 }

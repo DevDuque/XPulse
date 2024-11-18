@@ -23,7 +23,6 @@ public class PlayersFragment extends Fragment {
     private UserAdapter userAdapter;
 
     public PlayersFragment() {
-        // Required empty public constructor
     }
 
     public static PlayersFragment newInstance() {
@@ -33,10 +32,10 @@ public class PlayersFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_users, container, false);
 
-        // Set up RecyclerView
+
         recyclerView = view.findViewById(R.id.recycler_users);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -51,9 +50,9 @@ public class PlayersFragment extends Fragment {
     // Método para gerar dados de usuários de mock
     private List<User> getMockUsers() {
         List<User> users = new ArrayList<>();
-        users.add(new User("DevDuque"));
-        users.add(new User("PedroHNO"));
-        users.add(new User("VicenteCSS"));
+        users.add(new User("DevDuque", "Busy", "ADMIN"));
+        users.add(new User("PedroHNO", "Available", "VIP"));
+        users.add(new User("VicenteCSS", "Busy", "GUEST"));
         return users;
     }
 }

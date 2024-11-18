@@ -41,7 +41,7 @@ public class HomeScreen extends AppCompatActivity {
             Room receivedRoom = (Room) bundle.getSerializable("newRoom");
             if (receivedRoom != null) {
                 Log.d("HomeScreen", "Room Received: " + receivedRoom.toString());
-                RoomManager.getInstance().addRoom(receivedRoom);
+                RoomManager.getInstance(getApplicationContext()).addRoom(receivedRoom);
                 updateRoomFragment();
             }
         }
@@ -51,7 +51,7 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     private void updateRoomFragment() {
-        RoomFragment roomFragment = RoomFragment.newInstance(RoomManager.getInstance().getRoomList());
+        RoomFragment roomFragment = RoomFragment.newInstance(RoomManager.getInstance(getApplicationContext()).getRoomList());
 
         // Substituir o fragmento na transação
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -59,14 +59,14 @@ public class HomeScreen extends AppCompatActivity {
         transaction.commit();
 
         // Verifique se há salas e atualize a visibilidade
-        if (RoomManager.getInstance().getRoomList().isEmpty()) {
+        if (RoomManager.getInstance(getApplicationContext()).getRoomList().isEmpty()) {
             findViewById(R.id.fragment_rooms).setVisibility(View.GONE);
             findViewById(R.id.image_empty).setVisibility(View.VISIBLE);
         } else {
             findViewById(R.id.fragment_rooms).setVisibility(View.VISIBLE);
             findViewById(R.id.image_empty).setVisibility(View.GONE);
 
-            lblTotal.setText("Total: " + RoomManager.getInstance().getRoomList().size());
+            lblTotal.setText("Total: " + RoomManager.getInstance(getApplicationContext()).getRoomList().size());
         }
     }
 }
